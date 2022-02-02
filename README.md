@@ -1,8 +1,10 @@
 # YoutubeDownloader
-Downloads videos/playlist from youtube url.
+Downloads video/playlist/audio from youtube url.
 
 install all the required modules using below command
-` pip install -r requirement.txt`
+```
+pip install -r requirement.txt
+```
 
 
 ## Clone the repo
