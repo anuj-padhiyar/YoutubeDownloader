@@ -1,0 +1,5 @@
+nest_asyncio
+argparse
+requests_html
+bs4
+pytube
