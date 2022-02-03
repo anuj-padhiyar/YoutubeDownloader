@@ -6,12 +6,6 @@ install all the required modules using below command
 $ pip install -r requirement.txt
 ```
 
-
-## Clone the repo
-```
-$ git clone https://github.com/RaviPabari/podbean_downloader
-$ cd podbean_downloader/
-```
 ## Usage
 ```
 usage: playlistDownload.py [-h] -u  [-l] [-a | --audio | --no-audio] [-r]
