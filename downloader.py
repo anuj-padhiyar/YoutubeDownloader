@@ -10,7 +10,7 @@ class YoutubeDownloader:
     def __init__(self):
         self.content = ""
         self.links = []
-        self.location = "YTDownloads/"
+        self.location = "Downloads/"
         self.url = ""
 
         #get the required data from the initiator function
