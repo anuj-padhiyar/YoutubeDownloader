@@ -3,12 +3,12 @@ Downloads video/playlist/audio from youtube url.
 
 install all the required modules using below command
 ```
-$ pip install -r requirement.txt
+$ pip install -r requirements.txt
 ```
 
 ## Usage
 ```
-usage: playlistDownload.py [-h] -u  [-l] [-a | --audio | --no-audio] [-r]
+usage: downloader.py [-h] -u  [-l] [-a | --audio | --no-audio] [-r]
 
 Heyy, Download videos from Youtube.
 
@@ -23,5 +23,5 @@ options:
 
 ## Example
 ```
-$ python3 youtubeDownloader.py -u https://www.youtube.com/watch?v=GYeDTTb4jYI
+$ python3 downloader.py -u https://www.youtube.com/watch?v=GYeDTTb4jYI
 ```
