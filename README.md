@@ -23,5 +23,5 @@ options:
 
 ## Example
 ```
-$ python3 downloader.py -u https://www.youtube.com/watch?v=GYeDTTb4jYI
+$ python3 downloader.py -u "https://www.youtube.com/watch?v=GYeDTTb4jYI"
 ```
