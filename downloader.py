@@ -16,8 +16,8 @@ class YoutubeDownloader:
         #get the required data from the initiator function
         self.initiator()
         
-        #if the link is the link of playlist then we have to get all the links from playlist
-        if "playlist" in self.url:
+        # #if the link is the link of playlist then we have to get all the links from playlist
+        if "list" in self.url:
             self.get_page()
             self.extract_link()
         else:
@@ -63,18 +63,21 @@ class YoutubeDownloader:
                 while True:
                     if "/watch?" not in line[pointer:]:
                         break
-                    start = line[pointer:].index("/watch?")
-                    stop = line[pointer+start:].index("\"")
+                    start = line[pointer:].find("/watch?")
+                    stop = line[pointer+start:].find("\"")
+                    if stop==-1:
+                        break
                     finalLink = line[pointer+start:pointer+start+stop].replace("\\u0026","&")
                     if 'index' in finalLink:
-                        self.links.append("https://www.youtube.com"+finalLink.split("&list")[0])
+                        self.links.append("https://www.youtube.com"+finalLink.split("&")[0])
                     pointer = pointer + start + stop
-        
+        self.links = list(set(self.links))
+
     def get_resolution(self,stream):
         stream = stream.filter(progressive=True,file_extension='mp4').order_by('resolution').desc()
         availableRes = [int(i.resolution[:-1]) for i in stream.filter()]
 
-        #user havnt passed the value for resolution
+        #user havn't passed the value for resolution
         if self.resolution[:-1]=="None":
             print("Selecting Best Resolution Available...")
             return str(availableRes[0]) +'p'
